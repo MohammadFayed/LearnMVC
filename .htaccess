@@ -1,0 +1,11 @@
+RewriteEngine on
+
+Options -MultiViews
+Options -Indexes
+
+RewriteCond %{REQUEST_FILENAME} !--f
+RewriteCond %{REQUEST_FILENAME} !--d
+RewriteCond %{REQUEST_FILENAME} !-l
+#### this rule { ^(.+)$ }  meaning which anything after the domain name ####
+#### redirect to index.php and url=$1 meaning It will come more than url ####
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
