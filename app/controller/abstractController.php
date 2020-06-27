@@ -1,12 +1,20 @@
 <?php
 namespace controller;
 
-class abstractController
+class AbstractController
 {
+    public $load;
+
+
+    public function __construct()
+    {
+        $this->load = new \core\Loader();
+    }
     public function notFound()
     {
-        echo "Page Not Found";
+        $this->load->view('notFound');
     }
+
 }
 
 ?>

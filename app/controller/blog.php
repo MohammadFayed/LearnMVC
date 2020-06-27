@@ -1,17 +1,20 @@
-<?php 
+<?php
 namespace controller;
 
-class blog extends abstractController
+class Blog extends AbstractController
 {
-    public function default()
+    public function defualt()
     {
         echo "you are in blog controller and defualt method";
     }
-    public function add($id)
+    public function add()
     {
-        echo "you are in blog controller and Add method and id = ". $id;
+        $data = array(
+            'noNav' => '',
+            'name' => 'mohammad'
+        );
+    //    echo "add action";
+        $this->load->view('blog/add', $data);
     }
-
 }
-
 ?>

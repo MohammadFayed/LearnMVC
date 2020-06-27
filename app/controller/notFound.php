@@ -1,9 +1,8 @@
-<?php 
+<?php
 namespace controller;
 
-class notFound extends abstractController
+class NotFound extends AbstractController
 {
-    
-}
 
+}
 ?>

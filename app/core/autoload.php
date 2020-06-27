@@ -9,7 +9,7 @@ function autoload($class)
         // Get the name space to covert directories name
         $nameSpace = substr($className, 0, $lastNsPos);
         // Get the class name to include the file which class is exists in
-        $className = substr($className, $lastNsPos + 1);
+        $className = ucfirst(substr($className, $lastNsPos + 1));
         // set file name to include the file of class
         $fileName = APP_PATH.$nameSpace .DS. $className.".php";
     endif;

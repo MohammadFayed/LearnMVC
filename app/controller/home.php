@@ -1,13 +1,12 @@
-<?php 
+<?php
 namespace controller;
 
-class home extends abstractController
+class Home extends AbstractController
 {
-
-    public function default()
+    public function defualt()
     {
-        echo "you are in home controller and default method";
+        $data['title'] = 'home';
+        $this->load->view('home/defualt', $data);
     }
 }
-
 ?>
